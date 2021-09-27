@@ -1,59 +1,37 @@
 <template id="app">
   <div class="wrapper">
     <div id="main" class="main mx-auto">
-      <header id="nav-area">
+      <header id="nav-area" class="sticky-top">
         <navbar />
       </header>
       <div id="main-content" class="container mx-auto">
         <router-view />
       </div>
     </div>
-    <div id="sidebar-area" class="sidebar">
+    <div id="sidebar-area" class="sidebar-area">
       <sidebar />
     </div>
+    <addGroupModal />
+    <newGroupModal />
   </div>
 </template>
 
 <script>
 import navbar from "../components/navbar";
 import sidebar from "../components/sidebar";
+import addGroupModal from "../components/addGroupModal";
+import newGroupModal from "../components/newGroupModal";
 export default {
   components: {
     //引入複數components
     navbar,
     sidebar,
+    addGroupModal,
+    newGroupModal,
   },
 };
 </script>
 <style scoped>
-.toggle:focus,
-.toggle:active {
-  outline: none !important;
-  box-shadow: none;
-}
-.main {
-  flex-shrink: 1;
-  width: 100%;
-}
-
-.main-content {
-  width: 100%;
-}
-
-.container-list {
-  margin: 0 auto;
-  list-style: none;
-}
-
-.content-title {
-  font-size: 38px;
-  letter-spacing: 0.3rem;
-  margin: 0 auto;
-  width: 80%;
-  display: inline;
-  border-left: 5px #335c67 solid;
-}
-
 .card-order {
   width: 25vh;
   border-radius: 4px;

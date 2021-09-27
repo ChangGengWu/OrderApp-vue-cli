@@ -9,7 +9,9 @@
         >
           <i class="bi bi-list"></i>
         </button>
-        <a class="navbar-brand fs-4" href="">OrderApp</a>
+        <router-link to="avaiable">
+          <a class="navbar-brand fs-4" href="">OrderApp</a>
+        </router-link>
       </div>
       <div class="d-flex align-items-baseline justify-content-center">
         <div>
@@ -17,7 +19,12 @@
             ><i class="bi bi-person-circle"></i>USER01</span
           >
         </div>
-        <!-- <button type="button" class="btn btn-primary">登入</button> -->
+        <router-link to="signup">
+          <button type="button" class="btn btn-primary">註冊</button>
+        </router-link>
+        <router-link to="login">
+          <button type="button" class="btn btn-primary">登入</button>
+        </router-link>
       </div>
     </div>
   </nav>
@@ -27,7 +34,6 @@
 export default {
   setup() {
     function toggleSidebar() {
-      console.log("124");
       $("#sidebar").toggleClass("hide");
     }
 
@@ -50,9 +56,9 @@ export default {
   border: 2px #6b705c solid;
   color: #6b705c;
   background-color: #f8f9fa;
-  padding: 0.5rem 0.9rem;
+  padding: 0.2rem 0.8rem;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 0.2rem;
   display: flex;
   align-items: center;
   letter-spacing: 0.1rem;

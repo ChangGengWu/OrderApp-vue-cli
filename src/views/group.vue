@@ -3,10 +3,18 @@
     <h2 class="content-title p-1 ms-5 ps-3">群組</h2>
   </div>
   <div class="d-flex justify-content-end group-area">
-    <button class="btn btn-success me-1 d-flex align-items-center">
+    <button
+      class="btn btn-success me-1 d-flex align-items-center"
+      data-bs-toggle="modal"
+      data-bs-target="#addGroup"
+    >
       <i class="bi bi-person-plus me-1"></i>加入群組
     </button>
-    <button class="btn btn-danger me-1 d-flex align-items-center">
+    <button
+      class="btn btn-danger me-1 d-flex align-items-center"
+      data-bs-toggle="modal"
+      data-bs-target="#newGroup"
+    >
       <i class="bi bi-plus-square me-1"></i>新增群組
     </button>
   </div>

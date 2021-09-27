@@ -9,8 +9,9 @@
     text-white
     bg-dark
     justify-content-between
+    sidebar
   "
-    style="width: 270px; height: 100vh"
+    style="width: 250px; height: 100vh;"
   >
     <span class="fs-4">Sidebar</span>
     <hr />
@@ -81,7 +82,6 @@ export default {
         title: "History",
       },
     ]);
-
     return {
       menu,
     };
@@ -90,24 +90,17 @@ export default {
 </script>
 
 <style scoped>
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-
-html {
-  height: -webkit-fill-available;
-}
-
 .sidebar {
   display: flex;
   flex-wrap: nowrap;
   width: auto;
-  height: 100vh;
+  height: calc(100vh - 7rem);
   height: -webkit-fill-available;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  max-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: sticky;
+  top: 0rem;
 }
 
 .sidebar ul {
@@ -121,8 +114,8 @@ html {
   font-size: 17px;
 }
 .sidebar li > a {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .sidebar i {

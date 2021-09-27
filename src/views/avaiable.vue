@@ -37,7 +37,9 @@
             </p>
           </div>
           <div class="text-center">
-            <a href="#" class="btn mt-2 btn-order">訂購</a>
+            <router-link to="product">
+              <a href="#" class="btn mt-2 btn-order">訂購</a>
+            </router-link>
           </div>
         </div>
       </div>

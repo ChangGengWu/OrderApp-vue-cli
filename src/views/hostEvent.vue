@@ -11,6 +11,7 @@
         placeholder="Username"
         aria-label="Username"
         aria-describedby="basic-addon1"
+        v-model="hostName"
       />
     </div>
 
@@ -19,6 +20,7 @@
       <select
         class="form-select form-select-sm"
         aria-label=".form-select-sm example"
+        v-model="hostGroup"
       >
         <option selected>Open this select menu</option>
         <option value="1">Group A</option>
@@ -37,6 +39,7 @@
             class="form-control"
             id="itemName"
             placeholder="Username"
+            v-model="itemName"
           />
         </div>
       </div>
@@ -49,37 +52,95 @@
             class="form-control"
             id="itemPrice"
             placeholder="Username"
+            v-model="itemPrice"
           />
         </div>
       </div>
       <div class="col-12">
-        <button id="addMenu" type="button" class="btn btn-primary">
-          Submit
+        <button
+          id="addMenu"
+          type="button"
+          class="btn btn-primary"
+          @click="addMenu"
+        >
+          新增
         </button>
       </div>
-      <ul id="tag-list" class="d-flex col-12 menu-tags">
-        <li>
-          <span>棒球 $750</span
-          ><button class="btn menu-delete">
+      <ul id="tag-list" class="d-flex flex-wrap col-12 menu-tags mb-4">
+        <li v-for="item in menuList" :key="item.id" class="mb-1 me-1">
+          <span>{{ item.itemName }} {{ item.itemPrice }}</span>
+          <button class="btn menu-delete" @click="deleteItem(item)">
             <i class="bi bi-x"></i>
           </button>
         </li>
-        <li>
-          <span>棒球 $750</span
-          ><button class="btn menu-delete"><i class="bi bi-x"></i></button>
-        </li>
-        <li>
-          <span>棒球 $750</span
-          ><button class="btn menu-delete"><i class="bi bi-x"></i></button>
-        </li>
       </ul>
     </div>
-    <div class="input-group">
+    <div class="input-group mb-3">
       <span class="input-group-text">備註</span>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
+      <textarea
+        class="form-control"
+        aria-label="With textarea"
+        v-model="hostDescription"
+      ></textarea>
     </div>
+    <div class="mb-5">
+      <imgUpload />
+    </div>
+    <div class="col-12 mb-4">
+      <button type="button" class="btn btn-primary" @click="submitMenu">
+        開團
+      </button>
+    </div>
+    {{ hostName }}{{ hostGroup }}{{ itemName }}{{ menuList
+    }}{{ hostDescription }}
   </div>
 </template>
+
+<script>
+import { ref } from "vue";
+import imageUpload from "../components/imgUpload";
+import imgUpload from "../components/imgUpload.vue";
+export default {
+  components: { imgUpload },
+  setup() {
+    const hostName = ref("");
+    const hostGroup = ref("");
+    const itemName = ref("");
+    const itemPrice = ref("");
+    const hostDescription = ref("");
+    const menuList = ref([]);
+
+    function addMenu() {
+      menuList.value.push({
+        id: menuList.value.length + 1,
+        itemName: itemName.value,
+        itemPrice: itemPrice.value,
+      });
+    }
+
+    function deleteItem(item) {
+      const index = menuList.value.findIndex((obj) => obj.id === item.id);
+      menuList.value.splice(index, 1);
+    }
+
+    function submitMenu() {}
+
+    return {
+      addMenu,
+      menuList,
+      itemPrice,
+      itemName,
+      hostName,
+      hostGroup,
+      hostDescription,
+      deleteItem,
+      submitMenu,
+      imageUpload,
+    };
+  },
+};
+</script>
+
 <style scoped>
 .menu-tags {
   list-style: none;
@@ -88,6 +149,8 @@
 }
 
 .menu-tags li {
+  min-width: 5rem;
+  min-height: 2.125rem;
   background-color: #468faf;
   /* border-left: 4px solid #cb997e; */
   letter-spacing: 0.05rem;
