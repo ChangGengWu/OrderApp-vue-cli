@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-items-center" style="height:80vh">
-    <div class="row p-5 container-list w-50 signup-background shadow">
+    <div class="row px-5 pt-5 pb-4 container-list login-plate shadow">
       <div class="mt-4 p-3 d-flex justify-content-center">
         <h2 class="content-title p-1 ms-5 ps-3 inline">登入</h2>
       </div>
@@ -31,7 +31,7 @@
             />
           </div>
           <div class="mb-4 row d-flex justify-content-center">
-            <button class="btn btn-primary col-sm-4" @click.prevent="login">
+            <button class="btn col-sm-12 btn-main" @click.prevent="login">
               登入
             </button>
           </div>
@@ -68,7 +68,8 @@ export default {
 };
 </script>
 <style scoped>
-.signup-background {
+.login-plate {
+  width: 40rem;
   background-color: #ffffff;
 }
 
@@ -82,5 +83,11 @@ export default {
   font-weight: 600;
   color: #495057;
   letter-spacing: 0.05rem;
+}
+
+.btn-main {
+  color: #fff;
+  background-color: #335c67;
+  border-color: #335c67;
 }
 </style>

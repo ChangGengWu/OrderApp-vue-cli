@@ -2,8 +2,8 @@
   <div class="mt-4 p-3">
     <h2 class="content-title p-1 ms-5 ps-3">進行中</h2>
   </div>
-  <div class="row mt-1 p-5 container-list">
-    <div class="col-md-4 col-lg-3 mb-5">
+  <div class="row mt-1 px-5 py-5 container-list container">
+    <div class="col-md-6 col-lg-3 mb-5">
       <div class="card shadow card-order">
         <div class="card-body">
           <h3 class="card-title mt-4 ms-4 card-order-title">XX Store</h3>
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-lg-3 mb-5">
+    <div class="col-md-6 col-lg-3 mb-5">
       <div class="card shadow card-order">
         <div class="card-body">
           <h3 class="card-title mt-4 ms-4 card-order-title">XX Store</h3>
@@ -83,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-lg-3 mb-5">
+    <div class="col-md-6 col-lg-3 mb-5">
       <div class="card shadow card-order">
         <div class="card-body">
           <h3 class="card-title mt-4 ms-4 card-order-title">DD Store</h3>
@@ -122,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-lg-3 mb-5">
+    <div class="col-md-6 col-lg-3 mb-5">
       <div class="card shadow card-order">
         <div class="card-body">
           <h3 class="card-title mt-4 ms-4 card-order-title">BB Store</h3>
@@ -161,7 +161,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-lg-3 mb-5">
+    <div class="col-md-6 col-lg-3 mb-5">
       <div class="card shadow card-order">
         <div class="card-body">
           <h3 class="card-title mt-4 ms-4 card-order-title">CC Store</h3>
@@ -218,7 +218,6 @@
 }
 
 .container-list {
-  margin: 0 auto;
   list-style: none;
 }
 
@@ -232,7 +231,7 @@
 }
 
 .card-order {
-  width: 25vh;
+  width: 16rem;
   border-radius: 4px;
   /* background-color: #e8e8e4; */
   background-color: #ffffff;
@@ -280,7 +279,7 @@
 }
 
 .btn-order {
-  width: 20vh;
+  width: 13rem;
   border-radius: 2px;
   background-color: #e29578;
   border-color: #e29578;

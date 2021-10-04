@@ -4,7 +4,7 @@
       <header id="nav-area" class="sticky-top">
         <navbar />
       </header>
-      <div id="main-content" class="container mx-auto">
+      <div id="main-content" class="container-fluid mx-auto">
         <router-view />
       </div>
     </div>

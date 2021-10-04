@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-items-center" style="height:80vh">
-    <div class="row mt-5 p-5 container-list w-50 signup-background shadow">
+    <div class="row mt-5 px-5 pt-5 pb-4 container-list signup-plate shadow">
       <div class="mt-4 p-3 d-flex justify-content-center">
         <h2 class="content-title p-1 ms-5 ps-3 inline">註冊</h2>
       </div>
@@ -35,7 +35,7 @@
               required
             />
           </div>
-          <div class="mb-4">
+          <div class="mb-5">
             <label
               for="confirmPasswordInputInput"
               class="form-label input-label"
@@ -50,7 +50,7 @@
             />
           </div>
           <div class="mb-4 row d-flex justify-content-center">
-            <button class="btn btn-primary col-sm-4">註冊</button>
+            <button class="btn btn-primary col-sm-12">註冊</button>
           </div>
         </div>
       </form>
@@ -58,7 +58,8 @@
   </div>
 </template>
 <style scoped>
-.signup-background {
+.signup-plate {
+  width: 40rem;
   background-color: #ffffff;
 }
 

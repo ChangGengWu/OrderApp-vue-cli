@@ -19,11 +19,15 @@
             ><i class="bi bi-person-circle"></i>USER01</span
           >
         </div>
-        <router-link to="signup">
-          <button type="button" class="btn btn-primary">註冊</button>
-        </router-link>
         <router-link to="login">
-          <button type="button" class="btn btn-primary">登入</button>
+          <button type="button" class="btn btn-light ms-2 nav-btn">
+            Sign in
+          </button>
+        </router-link>
+        <router-link to="signup">
+          <button type="button" class="btn btn-primary ms-2 nav-btn">
+            Sign up
+          </button>
         </router-link>
       </div>
     </div>
@@ -66,5 +70,9 @@ export default {
 
 .user-label i {
   margin-right: 5px;
+}
+
+.nav-btn {
+  widows: 5rem;
 }
 </style>

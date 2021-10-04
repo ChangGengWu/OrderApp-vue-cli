@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex row mt-5 flex-wrap justify-content-between">
-    <div class="product-imgs col-md-6">
+    <div class="product-imgs col-md-6 border">
       <div
         id="carouselExampleIndicators"
         class="carousel slide mx-auto"
@@ -72,7 +72,9 @@
         </button>
       </div>
 
-      <ul class="d-flex mt-4 justify-content-evenly p-img-list">
+      <ul
+        class="d-flex mt-4 justify-content-between p-img-list mx-auto flex-wrap"
+      >
         <li>
           <button
             type="button"
@@ -156,6 +158,11 @@
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+  width: 35rem;
+}
+.p-img-list > li {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 .p-img-list > li > button {
   border: none;

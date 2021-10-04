@@ -1,14 +1,17 @@
 <template>
-  <div class="w-100">
-    <label for="formFile" class="form-label">上傳圖片</label>
-    <input
-      class="form-control"
-      type="file"
-      id="formFile"
-      accept="image/*"
-      @change="previewImage"
-      multiple
-    />
+  <div class="w-100 row">
+    <div class="col-3 form-label fs-5 mb-3">上傳圖片</div>
+    <div class="col-9">
+      <input
+        class="form-control"
+        type="file"
+        id="formFile"
+        accept="image/*"
+        @change="previewImage"
+        multiple
+      />
+      <div class="form-text">上傳檔案限制100MB</div>
+    </div>
     <div class="d-flex flex-wrap">
       <div
         v-for="(item, index) in previewList"
